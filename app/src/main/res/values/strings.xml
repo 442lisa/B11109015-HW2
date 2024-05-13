@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">test3</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="spot_scrption">
+         名字:中正紀念堂\n
+        地點:中華民國臺北市\n
+        開放自:1980年4月5日\n
+        面積:250,000平方公尺\n
+        主堂體高:70公尺\n
+        擁有者:國立中正紀念堂管理處</string>
+
+    <string name="spot_introduction">
+    中正紀念堂是為了紀念中華民國第一任總統蔣介石，他於1975年逝世，次年行政院就破土開建中正紀念堂，設計師是設計圓山大飯店的楊卓成。\n
+    紀念堂原址是陸軍總部，當時是臺北市區內最大的軍區，據說從大陸運過來的黃金，就曾經存放在這個地方。</string>
+
+</resources>
