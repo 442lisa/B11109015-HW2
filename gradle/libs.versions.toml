@@ -27,4 +27,5 @@ play-services-maps = { group = "com.google.android.gms", name = "play-services-m
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }
 jetbrainsKotlinAndroid = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+safeargs = { id = "androidx.navigation.safeargs.kotlin", version = "2.5.3" }
 

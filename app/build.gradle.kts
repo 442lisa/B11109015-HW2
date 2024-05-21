@@ -4,6 +4,8 @@ plugins {
 }
 
 android {
+
+
     namespace = "com.example.test3"
     compileSdk = 34
 
@@ -51,6 +53,5 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
     implementation("com.google.android.gms:play-services-maps:18.0.1")
-
 
 }

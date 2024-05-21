@@ -9,17 +9,30 @@
         android:id="@+id/FirstFragment"
         android:name="com.example.test3.FirstFragment"
         android:label="@string/first_fragment_label"
-        tools:layout="@layout/fragment_first" >
+        tools:layout="@layout/fragment_1_1" >
 
         <action
             android:id="@+id/action_FirstFragment_to_SecondFragment"
-            app:destination="@id/SecondFragment" />
+            app:destination="@id/SecondFragment">
+            <argument
+                android:name="location"
+                app:argType="string" />
+
+        </action>
+        <action
+            android:id="@+id/action_FirstFragment_to_introduction1Fragment"
+            app:destination="@id/introduction1Fragment" />
+        <action
+            android:id="@+id/action_FirstFragment_to_introduction2Fragment"
+            app:destination="@id/introduction2Fragment" />
+
+
     </fragment>
     <fragment
         android:id="@+id/SecondFragment"
         android:name="com.example.test3.SecondFragment"
         android:label="@string/second_fragment_label"
-        tools:layout="@layout/fragment_second" >
+        tools:layout="@layout/fragment_introduction" >
 
         <action
             android:id="@+id/action_SecondFragment_to_FirstFragment"
@@ -27,9 +40,28 @@
         <action
             android:id="@+id/action_SecondFragment_to_thirdFragment"
             app:destination="@id/thirdFragment" />
+        <argument
+            android:name="location"
+            app:argType="string" />
     </fragment>
     <fragment
         android:id="@+id/thirdFragment"
         android:name="com.example.test3.ThirdFragment"
         android:label="ThirdFragment" />
+    <fragment
+        android:id="@+id/introduction1Fragment"
+        android:name="com.example.test3.Introduction1Fragment"
+        android:label="Introduction1Fragment" >
+        <action
+            android:id="@+id/action_introduction1Fragment_to_thirdFragment"
+            app:destination="@id/thirdFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/introduction2Fragment"
+        android:name="com.example.test3.Introduction2Fragment"
+        android:label="Introduction2Fragment" >
+        <action
+            android:id="@+id/action_introduction2Fragment_to_thirdFragment"
+            app:destination="@id/thirdFragment" />
+    </fragment>
 </navigation>

@@ -1,35 +1,32 @@
 package com.example.test3
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
-import com.example.test3.databinding.FragmentIntroductionBinding
+import com.example.test3.databinding.FragmentIntroduction1Binding
+import com.example.test3.databinding.FragmentiIntrodution2Binding
 import com.google.android.gms.maps.model.LatLng
 
-/**
- * A simple [Fragment] subclass as the second destination in the navigation.
- */
-class SecondFragment : Fragment() {
-
-private var _binding: FragmentIntroductionBinding? = null
+class Introduction2Fragment:Fragment()
+{
+    private var _binding: FragmentiIntrodution2Binding? = null
     // This property is only valid between onCreateView and
     // onDestroyView.
     private val binding get() = _binding!!
 
     val sharedViewModel: viewmodel by viewModels()
 
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
 
-      _binding = FragmentIntroductionBinding.inflate(inflater, container, false)
-      return binding.root
+        _binding = FragmentiIntrodution2Binding.inflate(inflater, container, false)
+        return binding.root
 
     }
 
@@ -37,11 +34,13 @@ private var _binding: FragmentIntroductionBinding? = null
         super.onViewCreated(view, savedInstanceState)
 
         binding.button2.setOnClickListener {
-            sharedViewModel.updateLocation( LatLng(25.035625072789692, 121.52026754823773))
-            findNavController().navigate(R.id.action_SecondFragment_to_thirdFragment)
+            // 25.194251,121.5583614
+
+            sharedViewModel.updateLocation( LatLng(25.194343259677744, 121.56089338078797))
+            findNavController().navigate(R.id.action_introduction2Fragment_to_thirdFragment)
         }
     }
-override fun onDestroyView() {
+    override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
     }
